@@ -1,0 +1,2 @@
+# slimple
+Ghost theme
