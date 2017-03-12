@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "npm run copy:html && npm run build:styles",
+    "build:styles": "node-sass src/styles/ -o dist/ --source-map true",
+    "copy:html": "copyfiles -u src/index.html dist",
+    "dev:styles": "node-sass -w src/styles/ -o src/ --source-map true",
+    "dev": "npm run dev:styles | lite-server -c liteserver.config.json"
+  },
+  "dependencies": {
+    "node-sass": "^4.5.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "lite-server": "^2.3.0"
+  }
+}

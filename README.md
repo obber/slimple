@@ -1,2 +1,3 @@
-# slimple
-Ghost theme
+# Slimple
+
+Ghost blogging platform theme

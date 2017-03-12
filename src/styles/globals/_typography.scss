@@ -1,0 +1,22 @@
+body {
+  font-family: $mainFont;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: palette('darkgray');
+}
+
+a {
+  color: palette('darkgray');
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: palette('red');
+}
+
+p {
+  line-height: 1.6;
+}

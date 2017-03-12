@@ -1,0 +1,10 @@
+@import 'componentVars';
+
+.header {
+  min-height: 95px;
+  border-bottom: $borderStyle;
+}
+
+.header-left {
+  border-right: $borderStyle;
+}

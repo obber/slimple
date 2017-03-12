@@ -1,0 +1,14 @@
+@import 'componentVars';
+
+.content {
+  min-height: 500px;
+  border-bottom: $borderStyle;
+}
+
+.content-left {
+  border-right: $borderStyle;
+}
+
+.content-right .full {
+  max-width: 700px;
+}
