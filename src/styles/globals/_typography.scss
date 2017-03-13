@@ -1,20 +1,38 @@
 body {
   font-family: $mainFont;
-  font-size: 16px;
+  font-size: $baseSize;
+
+  @include mq('sm') {
+    font-size: 14px;
+  }
+
+  @include mq('md') {
+    font-size: 16px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
   color: palette('darkgray');
+}
+
+@each $heading, $size in $headingSizes {
+  #{$heading} {
+    font-size: $size;
+  }
 }
 
 a {
   color: palette('darkgray');
   text-decoration: none;
-  transition: color 0.2s ease;
-}
 
-a:hover {
-  color: palette('red');
+  @include mq('lg') {
+    transition: color 0.2s ease;
+  }
+
+  &:hover {
+    color: palette('red');
+  }
 }
 
 p {

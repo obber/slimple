@@ -1,10 +1,69 @@
-@import 'componentVars';
-
 .header {
-  min-height: 95px;
   border-bottom: $borderStyle;
+  padding: 20px;
+
+  @include mq('sm') {
+    min-height: 95px;
+    padding: 0;
+  }
+
+  h1 {
+    color: palette('darkgray', 20);
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+
+    @include mq('sm') {
+      font-size: 1.5rem;
+    }
+
+    @include mq('md') {
+      font-size: 1.6rem;
+    }
+
+    @include mq('lg') {
+      font-size: 1.8rem;
+    }
+  }
+
+  .header-left h1 {
+    font-weight: 400;
+
+    @include mq('sm') {
+      font-weight: 300;
+    }
+  }
+
+  .header-right h1 {
+    color: palette('gray', -10);
+
+    @include mq('sm') {
+      color: palette('darkgray');
+    }
+  }
 }
 
 .header-left {
-  border-right: $borderStyle;
+  @include mq('sm') {
+    border-right: $borderStyle;
+  }
+}
+
+.header-right {
+  margin-top: 8px;
+  
+  @include mq('sm') {
+    margin-top: 0;
+  }
+}
+
+.job-title {
+  font-weight: 400;
+}
+
+.header-right .full {
+
+  @include mq('sm') {
+    padding-left: map-get($spacing, 'large');
+  }
 }

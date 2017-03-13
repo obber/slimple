@@ -1,9 +1,10 @@
 @import 'vars';
 
 @import 'modules/palette';
+@import 'modules/mq';
 
-@import 'globals/spacing';
 @import 'globals/typography';
+@import 'globals/misc';
 
 @import 'components/body';
 @import 'components/nav';
@@ -11,3 +12,4 @@
 @import 'components/content';
 @import 'components/logo';
 @import 'components/post';
+@import 'components/footer';

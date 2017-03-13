@@ -1,58 +1,140 @@
-.header-right .full,
-.content-right .full {
-  padding-left: 45px; }
-
-.content-left .full,
-.content-right .full {
-  padding-top: 45px; }
-
-.content-right .full {
-  padding-right: 45px; }
-
-.full {
-  height: 100%; }
-
-.single-post {
-  margin-bottom: 45px; }
-
 body {
   font-family: "jaf-facitweb", sans-serif;
   font-size: 16px; }
+  @media (min-width: 48em) {
+    body {
+      font-size: 14px; } }
+  @media (min-width: 64em) {
+    body {
+      font-size: 16px; } }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "myriad-pro", sans-serif;
   color: #373a3e; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.8rem; }
+
+h3 {
+  font-size: 1.6rem; }
+
+h4 {
+  font-size: 1.4rem; }
+
+h5 {
+  font-size: 1.2rem; }
+
+h6 {
+  font-size: 1rem; }
 
 a {
   color: #373a3e;
-  text-decoration: none;
-  transition: color 0.2s ease; }
-
-a:hover {
-  color: #D94F3A; }
+  text-decoration: none; }
+  @media (min-width: 75em) {
+    a {
+      transition: color 0.2s ease; } }
+  a:hover {
+    color: #E03C3C; }
 
 p {
   line-height: 1.6; }
 
+.full {
+  height: 100%; }
+
 body {
-  background-color: #FAFAFB; }
+  background-color: #fff; }
 
 .main-nav {
   width: 100%; }
   .main-nav .link {
-    padding: 15px 0;
-    transition: color 0.2s ease, background-color 0.2s ease; }
+    padding: 15px 0; }
+    @media (min-width: 75em) {
+      .main-nav .link {
+        transition: color 0.2s ease, background-color 0.2s ease; } }
   .main-nav .link:hover {
     cursor: pointer;
     background-color: #f1f2f3; }
     .main-nav .link:hover a {
       color: #373a3e; }
 
-.header {
-  min-height: 95px;
-  border-bottom: 1px solid #d5d9dc; }
+.content-left {
+  max-height: 0;
+  overflow: hidden; }
+  @media (min-width: 48em) {
+    .content-left {
+      display: block;
+      overflow: visible;
+      height: auto;
+      max-height: none; } }
 
-.header-left {
-  border-right: 1px solid #d5d9dc; }
+.menu-show {
+  max-height: 500px; }
+
+.hamburger-menu {
+  color: #676d74;
+  font-size: 1.3rem;
+  padding: 10px;
+  text-align: center; }
+  @media (min-width: 48em) {
+    .hamburger-menu {
+      display: none; } }
+  .hamburger-menu i {
+    cursor: pointer; }
+  .hamburger-menu i:hover {
+    color: #E03C3C; }
+
+.header {
+  border-bottom: 1px solid #d5d9dc;
+  padding: 20px; }
+  @media (min-width: 48em) {
+    .header {
+      min-height: 95px;
+      padding: 0; } }
+  .header h1 {
+    color: #676d74;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 300; }
+    @media (min-width: 48em) {
+      .header h1 {
+        font-size: 1.5rem; } }
+    @media (min-width: 64em) {
+      .header h1 {
+        font-size: 1.6rem; } }
+    @media (min-width: 75em) {
+      .header h1 {
+        font-size: 1.8rem; } }
+  .header .header-left h1 {
+    font-weight: 400; }
+    @media (min-width: 48em) {
+      .header .header-left h1 {
+        font-weight: 300; } }
+  .header .header-right h1 {
+    color: #9fa6ac; }
+    @media (min-width: 48em) {
+      .header .header-right h1 {
+        color: #373a3e; } }
+
+@media (min-width: 48em) {
+  .header-left {
+    border-right: 1px solid #d5d9dc; } }
+
+.header-right {
+  margin-top: 8px; }
+  @media (min-width: 48em) {
+    .header-right {
+      margin-top: 0; } }
+
+.job-title {
+  font-weight: 400; }
+
+@media (min-width: 48em) {
+  .header-right .full {
+    padding-left: 45px; } }
 
 .content {
   min-height: 500px;
@@ -60,14 +142,30 @@ body {
 
 .content-left {
   border-right: 1px solid #d5d9dc; }
+  @media (min-width: 48em) {
+    .content-left .full {
+      padding-top: 45px; } }
 
 .content-right .full {
-  max-width: 700px; }
-
-.logo h1 {
-  color: #babfc4; }
+  padding-left: 0;
+  padding: 0 30px;
+  margin-top: 30px; }
+  @media (min-width: 48em) {
+    .content-right .full {
+      padding-top: 45px;
+      padding-right: 45px;
+      padding-left: 45px;
+      margin-top: 0;
+      max-width: 750px; } }
 
 .post-title {
-  margin-top: 0; }
+  margin-top: 0;
+  font-size: 2.6rem; }
+
+.single-post {
+  margin-bottom: 30px; }
+
+.copyright {
+  color: #9ba0a6; }
 
 /*# sourceMappingURL=main.css.map */

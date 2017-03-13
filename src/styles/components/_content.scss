@@ -1,5 +1,3 @@
-@import 'componentVars';
-
 .content {
   min-height: 500px;
   border-bottom: $borderStyle;
@@ -7,8 +5,24 @@
 
 .content-left {
   border-right: $borderStyle;
+
+  .full {
+    @include mq('sm') {
+      padding-top: map-get($spacing, 'large');
+    }
+  }
 }
 
 .content-right .full {
-  max-width: 700px;
+  padding-left: 0;
+  padding: 0 map-get($spacing, 'medium');
+  margin-top: map-get($spacing, 'medium');
+
+  @include mq('sm') {
+    padding-top: map-get($spacing, 'large');
+    padding-right: map-get($spacing, 'large');
+    padding-left: map-get($spacing, 'large');
+    margin-top: 0;
+    max-width: 750px;
+  }
 }

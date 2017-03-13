@@ -4,8 +4,13 @@
 
 .post-title {
   margin-top: 0;
+  font-size: 2.6rem;
 }
 
 .post-meta .date {
   
+}
+
+.single-post {
+  margin-bottom: map-get($spacing, 'medium');
 }

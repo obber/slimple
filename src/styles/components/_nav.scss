@@ -3,7 +3,10 @@
 
   .link {
     padding: 15px 0;
-    transition: color 0.2s ease, background-color 0.2s ease;
+
+    @include mq('lg') {
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
   }
 
   .link:hover {
@@ -13,5 +16,40 @@
     a {
       color: palette('darkgray');
     }
+  }
+}
+
+.content-left {
+  max-height: 0;
+  overflow: hidden;
+
+  @include mq('sm') {
+    display: block;
+    overflow: visible;
+    height: auto;
+    max-height: none;
+  }
+}
+
+.menu-show {
+  max-height: 500px;
+}
+
+.hamburger-menu {
+  color: palette('darkgray', 20);
+  font-size: 1.3rem;
+  padding: 10px;
+  text-align: center;
+
+  @include mq('sm') {
+    display: none;
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  i:hover {
+    color: palette('red');
   }
 }

@@ -1,21 +1,39 @@
 // font-family
+$headingFont: 'myriad-pro', sans-serif;
 $mainFont: 'jaf-facitweb', sans-serif;
+
+// font sizes
+$baseSize: 16px;
+$headingSizes: (
+  'h1': 2rem,
+  'h2': 1.8rem,
+  'h3': 1.6rem,
+  'h4': 1.4rem,
+  'h5': 1.2rem,
+  'h6': 1rem
+);
 
 // colors
 $colors: (
-  'white'   : #FAFAFB,
+  'white'   : #fff,
   'gray'    : #babfc4,
   'darkgray': #373a3e,
   'blue'    : #3A6496,
   'green'   : #53853C,
   'yellow'  : #FFD34F,
   'orange'  : #F29A2E,
-  'red'     : #D94F3A
+  'red'     : #E03C3C
 );
 
 // maps
 $spacing: (
-  'content-left': 45px,
-  'default'     : 30px,
-  'content-top' : 45px
+  'small'  : 15px,
+  'medium': 30px,
+  'large'  : 45px
+);
+
+$breakpoints: (
+  'sm' : 48em,
+  'md' : 64em,
+  'lg' : 75em,
 );
