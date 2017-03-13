@@ -1,9 +1,9 @@
 /**
  *  Menu constructor
  *
- *  @param {buttonId, targetId} options
- *    buttonId - id of toggling button element
- *    targetId - id of element to toggle on/off
+ *  @param {button, target} options
+ *    button - id of toggling button element
+ *    target - id of element to toggle on/off
  */
 var Menu = function(options) {
   // cache 'this'

@@ -23,6 +23,14 @@
   max-height: 0;
   overflow: hidden;
 
+  a {
+    color: palette('darkgray');
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   @include mq('sm') {
     display: block;
     overflow: visible;

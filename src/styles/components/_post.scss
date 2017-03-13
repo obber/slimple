@@ -14,3 +14,11 @@
 .single-post {
   margin-bottom: map-get($spacing, 'medium');
 }
+
+.post-date {
+  color: palette('darkgray', 30);
+}
+
+.post-title {
+  color: palette('darkgray');
+}

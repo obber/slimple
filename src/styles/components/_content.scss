@@ -19,9 +19,7 @@
   margin-top: map-get($spacing, 'medium');
 
   @include mq('sm') {
-    padding-top: map-get($spacing, 'large');
-    padding-right: map-get($spacing, 'large');
-    padding-left: map-get($spacing, 'large');
+    padding: map-get($spacing, 'large');
     margin-top: 0;
     max-width: 750px;
   }
