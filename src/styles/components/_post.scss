@@ -1,5 +1,12 @@
 .single-post {
+  .post-title a {
+    color: palette('darkgray');
 
+    &:hover {
+      color: palette('red');
+      text-decoration: none;
+    }
+  }
 }
 
 .post-title {

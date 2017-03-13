@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'op-mono-book';
+  src: url("fonts/book/book.eot?#iefix") format("embedded-opentype"), url("fonts/book/book.otf") format("opentype"), url("fonts/book/book.woff") format("woff"), url("fonts/book/book.ttf") format("truetype"), url("fonts/book/book.svg#book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'op-mono-book-italic';
+  src: url("fonts/italic/italic.eot?#iefix") format("embedded-opentype"), url("fonts/italic/italic.otf") format("opentype"), url("fonts/italic/italic.woff") format("woff"), url("fonts/italic/italic.ttf") format("truetype"), url("fonts/italic/italic.svg#italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   font-family: "jaf-facitweb", sans-serif;
   font-size: 14px; }
@@ -33,6 +45,24 @@ dt,
 li,
 td {
   line-height: 1.6; }
+
+code, kbd, pre, samp {
+  font-family: 'op-mono-book', monospace; }
+  code em, kbd em, pre em, samp em {
+    font-family: 'op-mono-book-italic', monospace; }
+
+pre {
+  background-color: #f7f9fc;
+  color: #1e334c;
+  padding: 0 20px;
+  line-height: 1.4; }
+
+p code {
+  padding: 3px 6px;
+  background-color: white;
+  color: #4c7f35;
+  border-radius: 3px;
+  border: 1px solid #dde7f2; }
 
 .full {
   height: 100%; }
@@ -202,6 +232,12 @@ body {
       padding: 45px;
       margin-top: 0;
       max-width: 750px; } }
+
+.single-post .post-title a {
+  color: #373a3e; }
+  .single-post .post-title a:hover {
+    color: #E03C3C;
+    text-decoration: none; }
 
 .post-title {
   margin-top: 0;
