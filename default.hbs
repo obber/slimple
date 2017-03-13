@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{!-- Page Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  {{!-- Brand icon --}}
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+  {{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+  <script src="https://use.fontawesome.com/0f6af61179.js"></script>
+  <script src="{{asset "js/menu.js"}}"></script>
+
+  {{!-- Ghost outputs important style and meta data with this tag --}}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+  
+  <div class="row header">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 header-left">
+      <div class="logo full row middle-xs center-xs">
+        <h1>Kan Adachi</h1>
+      </div>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 header-right">
+      <div class="full row middle-xs center-xs start-sm">
+        <h1 class="job-title">UI & Front-End Engineer</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row content">
+
+    {{!-- The blog navigation links --}}
+    {{navigation}}
+
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 content-right">
+      <div class="full row">
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+      </div>
+    </div>
+  </div>
+
+  {{!-- The tiny footer at the very bottom --}}
+  {{!--<footer class="site-footer clearfix">
+    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+    <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+  </footer>--}}
+  <div class="footer row middle-xs center-xs">
+    <p class="copyright">&copy; Kan Adachi 2017</p>
+  </div>
+
+  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  {{!-- Ghost outputs important scripts and data with this tag --}}
+  {{ghost_foot}}
+  {{!-- Fitvids makes video embeds responsive and awesome --}}
+  {{!--<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>--}}
+
+  <script>
+    new Menu({
+      button: 'menu-button',
+      target: 'menu-target',
+      className: 'menu-show'
+    });
+  </script>
+
+
+</body>
+</html>

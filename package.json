@@ -1,4 +1,7 @@
 {
+  "name": "slimple",
+  "version": "1.0.1",
+  "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
   "scripts": {
     "build": "npm run copy:html && npm run build:styles",
     "build:styles": "node-sass src/styles/ -o dist/ --source-map true",
