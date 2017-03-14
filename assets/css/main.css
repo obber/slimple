@@ -1,12 +1,14 @@
 body {
   font-family: "jaf-facitweb", sans-serif;
-  font-size: 14px; }
+  font-size: 16px;
+  hyphens: auto; }
   @media (min-width: 48em) {
     body {
-      font-size: 16px; } }
+      font-size: 19px; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "jaf-facitweb", sans-serif;
+  line-height: 1.4em;
   color: #373a3e; }
 
 h1 {
@@ -105,6 +107,9 @@ a {
 
 mark {
   background-color: #ffedb5; }
+
+li {
+  margin: 6px 0; }
 
 body {
   background-color: #fff; }
@@ -254,7 +259,7 @@ body {
 
 .content-right .full {
   padding-left: 0;
-  padding: 0 30px;
+  padding: 0 45px;
   margin-top: 30px; }
   @media (min-width: 48em) {
     .content-right .full {

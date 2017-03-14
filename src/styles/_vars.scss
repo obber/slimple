@@ -4,8 +4,11 @@ $mainFont: 'jaf-facitweb', sans-serif;
 $codeFont: 'op-mono-book', sans-serif;
 $codeFontItalic: 'op-mono-book-italic', sans-serif;
 
+// main width:
+$mainWidth: 750px;
+
 // font sizes
-$baseSize: 14px;
+$baseSize: 16px;
 $headingSizes: (
   'h1': 2rem,
   'h2': 1.8rem,
@@ -27,7 +30,6 @@ $colors: (
   'red'     : #E03C3C
 );
 
-// maps
 $spacing: (
   'small'  : 15px,
   'medium': 30px,
