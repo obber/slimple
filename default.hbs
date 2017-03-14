@@ -17,20 +17,17 @@
   <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
   {{!-- Styles'n'Scripts --}}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/tomorrow-night-bright.min.css">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/dependencies.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "fonts/fonts.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
 
   <script src="https://use.fontawesome.com/0f6af61179.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
-  <script src="{{asset "js/menu.js"}}"></script>
+  <script src="{{asset "js/build.js"}}"></script>
 
   {{!-- Ghost outputs important style and meta data with this tag --}}
   {{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
+<body class="{{body_class}}">
   
   <div class="row header">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 header-left">
@@ -67,18 +64,14 @@
     <p class="copyright">&copy; Kan Adachi {{date format="YYYY"}}</p>
   </div>
 
-  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-  {{!--<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>--}}
   {{!-- Ghost outputs important scripts and data with this tag --}}
   {{ghost_foot}}
-  {{!-- Fitvids makes video embeds responsive and awesome --}}
-  {{!--<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>--}}
 
   <script>
     // initialize highlight.js
     hljs.initHighlightingOnLoad();
 
-    // add responsive menu
+    // add responsive menu support
     new Menu({
       button: 'menu-button',
       target: 'menu-target',

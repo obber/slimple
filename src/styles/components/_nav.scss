@@ -1,20 +1,37 @@
 .main-nav {
   width: 100%;
+  background-color: palette('blue');
 
-  .link {
-    padding: 15px 0;
+  @include mq('sm') {
+    background-color: palette('white');
+    color: palette('darkgray');
+  }
+}
 
-    @include mq('lg') {
-      transition: color 0.2s ease, background-color 0.2s ease;
-    }
+.link {
+  color: palette('white');
+  padding: 15px 0;
+  cursor: pointer;
+  border-bottom: 1px dashed palette('blue', 20);
+
+  @include mq('sm') {
+    border-bottom: none;
+    color: palette('darkgray');
   }
 
-  .link:hover {
-    cursor: pointer;
-    background-color: palette('gray', 20);
+  @include mq('lg') {
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
 
-    a {
-      color: palette('darkgray');
+  &:hover {
+    background-color: palette('blue', 20);
+
+    @include mq('sm') {
+      background-color: palette('gray', 20);
+
+      a {
+        color: palette('darkgray');
+      }
     }
   }
 }
@@ -59,5 +76,26 @@
 
   i:hover {
     color: palette('red');
+  }
+
+  .bars {
+    width: 24px;
+    margin: auto;
+    cursor: pointer;
+
+    &:hover .single-bar {
+      background-color: palette('red');
+    }
+  }
+
+  .bars .single-bar {
+    border-radius: 2px;
+    height: 4px;
+    background-color: palette('darkgray', 20);
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

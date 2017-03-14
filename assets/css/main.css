@@ -110,17 +110,32 @@ body {
   background-color: #fff; }
 
 .main-nav {
-  width: 100%; }
-  .main-nav .link {
-    padding: 15px 0; }
-    @media (min-width: 75em) {
-      .main-nav .link {
-        transition: color 0.2s ease, background-color 0.2s ease; } }
-  .main-nav .link:hover {
-    cursor: pointer;
-    background-color: #f1f2f3; }
-    .main-nav .link:hover a {
-      color: #373a3e; }
+  width: 100%;
+  background-color: #3A6496; }
+  @media (min-width: 48em) {
+    .main-nav {
+      background-color: #fff;
+      color: #373a3e; } }
+
+.link {
+  color: #fff;
+  padding: 15px 0;
+  cursor: pointer;
+  border-bottom: 1px dashed #6f97c7; }
+  @media (min-width: 48em) {
+    .link {
+      border-bottom: none;
+      color: #373a3e; } }
+  @media (min-width: 75em) {
+    .link {
+      transition: color 0.2s ease, background-color 0.2s ease; } }
+  .link:hover {
+    background-color: #6f97c7; }
+    @media (min-width: 48em) {
+      .link:hover {
+        background-color: #f1f2f3; }
+        .link:hover a {
+          color: #373a3e; } }
 
 .content-left {
   max-height: 0;
@@ -151,6 +166,19 @@ body {
     cursor: pointer; }
   .hamburger-menu i:hover {
     color: #E03C3C; }
+  .hamburger-menu .bars {
+    width: 24px;
+    margin: auto;
+    cursor: pointer; }
+    .hamburger-menu .bars:hover .single-bar {
+      background-color: #E03C3C; }
+  .hamburger-menu .bars .single-bar {
+    border-radius: 2px;
+    height: 4px;
+    background-color: #676d74;
+    margin-bottom: 4px; }
+    .hamburger-menu .bars .single-bar:last-child {
+      margin-bottom: 0; }
 
 .pagination {
   width: 100%;
@@ -248,7 +276,7 @@ body {
   padding-top: 15px; }
 
 .single-post {
-  margin-bottom: 30px; }
+  margin-bottom: 45px; }
 
 .post-date {
   color: #80868e; }

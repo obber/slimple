@@ -3,17 +3,24 @@
   "version": "1.0.1",
   "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
   "scripts": {
-    "build": "npm run copy:html && npm run build:styles",
-    "build:styles": "node-sass src/styles/ -o assets/css --source-map false",
-    "copy:html": "copyfiles -u src/index.html dist",
-    "dev:styles": "node-sass -w src/styles/ -o assets/css --source-map true",
-    "dev": "npm run dev:styles"
+    "postinstall": "npm run build",
+    "build": "grunt build",
+    "dev": "grunt watch"
   },
   "dependencies": {
-    "node-sass": "^4.5.0"
+    "flexboxgrid": "^6.3.1",
+    "highlightjs": "^9.8.0",
+    "node-sass": "^4.5.0",
+    "normalize.css": "^5.0.0"
   },
   "devDependencies": {
     "copyfiles": "^1.2.0",
-    "lite-server": "^2.3.0"
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2"
   }
 }

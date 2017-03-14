@@ -18,12 +18,8 @@
   padding-top: map-get($spacing, 'small');
 }
 
-.post-meta {
-  // margin: map-get($spacing, 'medium') 0;
-}
-
 .single-post {
-  margin-bottom: map-get($spacing, 'medium');
+  margin-bottom: map-get($spacing, 'large');
 }
 
 .post-date {
