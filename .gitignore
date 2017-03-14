@@ -2,3 +2,5 @@ node_modules
 yarn.lock
 dist
 **/*.log*
+assets/css/*.css
+assets/js/*.js
