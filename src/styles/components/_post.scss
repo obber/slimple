@@ -29,3 +29,11 @@
 .post-title {
   color: palette('darkgray');
 }
+
+.page .post-content {
+  padding-top: 0;
+
+  p:first-child {
+    margin-top: 0;
+  }
+}

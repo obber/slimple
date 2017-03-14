@@ -289,6 +289,11 @@ body {
 .post-title {
   color: #373a3e; }
 
+.page .post-content {
+  padding-top: 0; }
+  .page .post-content p:first-child {
+    margin-top: 0; }
+
 .copyright {
   color: #9ba0a6; }
 
