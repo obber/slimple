@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'op-mono-book';
+  src: url("../fonts/book/book.eot?#iefix") format("embedded-opentype"), url("../fonts/book/book.otf") format("opentype"), url("../fonts/book/book.woff") format("woff"), url("../fonts/book/book.ttf") format("truetype"), url("../fonts/book/book.svg#book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'op-mono-book-italic';
+  src: url("../fonts/italic/italic.eot?#iefix") format("embedded-opentype"), url("../fonts/italic/italic.otf") format("opentype"), url("../fonts/italic/italic.woff") format("woff"), url("../fonts/italic/italic.ttf") format("truetype"), url("../fonts/italic/italic.svg#italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
