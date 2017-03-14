@@ -36,10 +36,11 @@ code, kbd, pre, samp {
 
 // code blocks
 pre {
-  background-color: palette('blue', 57);
-  color: palette('blue', -20);
-  padding: 0 20px;
   line-height: 1.4;
+
+  .hljs {
+    padding: 20px;
+  }
 }
 
 p code {

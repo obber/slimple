@@ -6,7 +6,7 @@ body {
       font-size: 16px; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "myriad-pro", sans-serif;
+  font-family: "jaf-facitweb", sans-serif;
   color: #373a3e; }
 
 h1 {
@@ -40,10 +40,9 @@ code, kbd, pre, samp {
     font-family: 'op-mono-book-italic', monospace; }
 
 pre {
-  background-color: #f7f9fc;
-  color: #1e334c;
-  padding: 0 20px;
   line-height: 1.4; }
+  pre .hljs {
+    padding: 20px; }
 
 p code {
   padding: 3px 6px;
@@ -175,7 +174,9 @@ body {
     color: #676d74;
     margin: 0;
     font-size: 1.3rem;
-    font-weight: 300; }
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .05em; }
     @media (min-width: 48em) {
       .header h1 {
         font-size: 1.5rem; } }
@@ -184,12 +185,12 @@ body {
         font-size: 1.6rem; } }
     @media (min-width: 75em) {
       .header h1 {
-        font-size: 1.8rem; } }
+        font-size: 1.7rem; } }
   .header .header-left h1 {
-    font-weight: 400; }
+    font-weight: 300; }
     @media (min-width: 48em) {
       .header .header-left h1 {
-        font-weight: 300; } }
+        font-weight: 200; } }
   .header .header-right h1 {
     color: #9fa6ac; }
     @media (min-width: 48em) {

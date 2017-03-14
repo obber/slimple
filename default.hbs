@@ -19,10 +19,12 @@
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/tomorrow-night-bright.min.css">
   <link rel="stylesheet" type="text/css" href="{{asset "fonts/fonts.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
 
   <script src="https://use.fontawesome.com/0f6af61179.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
   <script src="{{asset "js/menu.js"}}"></script>
 
   {{!-- Ghost outputs important style and meta data with this tag --}}
@@ -73,6 +75,10 @@
   {{!--<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>--}}
 
   <script>
+    // initialize highlight.js
+    hljs.initHighlightingOnLoad();
+
+    // add responsive menu
     new Menu({
       button: 'menu-button',
       target: 'menu-target',
