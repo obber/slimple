@@ -4,10 +4,10 @@
   "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
   "scripts": {
     "build": "npm run copy:html && npm run build:styles",
-    "build:styles": "node-sass src/styles/ -o dist/ --source-map true",
+    "build:styles": "node-sass src/styles/ -o assets/css --source-map false",
     "copy:html": "copyfiles -u src/index.html dist",
-    "dev:styles": "node-sass -w src/styles/ -o src/ --source-map true",
-    "dev": "npm run dev:styles | lite-server -c liteserver.config.json"
+    "dev:styles": "node-sass -w src/styles/ -o assets/css --source-map true",
+    "dev": "npm run dev:styles"
   },
   "dependencies": {
     "node-sass": "^4.5.0"

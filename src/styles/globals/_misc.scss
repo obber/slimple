@@ -2,11 +2,12 @@
 $borderColor: palette('gray', 10);
 $borderStyle: 1px dashed $borderColor;
 
-.full {
+.header .full {
   height: 100%;
 }
 
 hr {
+  width: 100%;
   border: none;
   height: 0px;
   border-bottom: $borderStyle;

@@ -19,6 +19,7 @@
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+  <link rel="stylesheet" type="text/css" href="{{asset "fonts/fonts.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
 
   <script src="https://use.fontawesome.com/0f6af61179.js"></script>
@@ -32,12 +33,12 @@
   <div class="row header">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 header-left">
       <div class="logo full row middle-xs center-xs">
-        <h1>Kan Adachi</h1>
+        <h1>{{@blog.title}}</h1>
       </div>
     </div>
     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 header-right">
       <div class="full row middle-xs center-xs start-sm">
-        <h1 class="job-title">UI & Front-End Engineer</h1>
+        <h1 class="job-title">{{@blog.description}}</h1>
       </div>
     </div>
   </div>
@@ -61,11 +62,11 @@
     <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
   </footer>--}}
   <div class="footer row middle-xs center-xs">
-    <p class="copyright">&copy; Kan Adachi 2017</p>
+    <p class="copyright">&copy; Kan Adachi {{date format="YYYY"}}</p>
   </div>
 
   {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  {{!--<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>--}}
   {{!-- Ghost outputs important scripts and data with this tag --}}
   {{ghost_foot}}
   {{!-- Fitvids makes video embeds responsive and awesome --}}

@@ -1,0 +1,13 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+  padding: map-get($spacing, 'small') 0;
+}
+
+.newer-posts {
+  text-align: left;
+}
+
+.older-posts {
+  text-align: right;
+}

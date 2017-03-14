@@ -52,10 +52,11 @@ p code {
   border-radius: 3px;
   border: 1px solid #dde7f2; }
 
-.full {
+.header .full {
   height: 100%; }
 
 hr {
+  width: 100%;
   border: none;
   height: 0px;
   border-bottom: 1px dashed #d5d9dc; }
@@ -152,6 +153,17 @@ body {
   .hamburger-menu i:hover {
     color: #E03C3C; }
 
+.pagination {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0; }
+
+.newer-posts {
+  text-align: left; }
+
+.older-posts {
+  text-align: right; }
+
 .header {
   border-bottom: 1px dashed #d5d9dc;
   padding: 20px; }
@@ -230,6 +242,9 @@ body {
 .post-title {
   margin-top: 0;
   font-size: 2.6rem; }
+
+.post-content {
+  padding-top: 15px; }
 
 .single-post {
   margin-bottom: 30px; }
