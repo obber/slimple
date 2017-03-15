@@ -11,7 +11,11 @@
 
 .post-title {
   margin-top: 0;
-  font-size: 2.6rem;
+  font-size: 2rem;
+
+  @include mq('sm') {
+    font-size: 2.4rem;
+  }
 }
 
 .post-content {

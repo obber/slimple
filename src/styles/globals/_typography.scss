@@ -1,6 +1,7 @@
 body {
   font-family: $mainFont;
   font-size: $baseSize;
+  font-weight: 300;
   hyphens: auto;
 
   @include mq('sm') {
@@ -8,8 +9,14 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
   font-family: $headingFont;
+  font-weight: 600;
   line-height: 1.4em;
   color: palette('darkgray');
 }
@@ -25,6 +32,7 @@ dd,
 dt,
 li,
 td {
+  font-weight: 300;
   line-height: 1.6;
 }
 
