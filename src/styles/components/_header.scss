@@ -8,10 +8,11 @@
   }
 
   h1 {
+    font-family: $headingFont;
     color: palette('darkgray', 20);
     margin: 0;
     font-size: 1.3rem;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: .05em;
 
@@ -32,7 +33,7 @@
     font-weight: 300;
 
     @include mq('sm') {
-      font-weight: 200;
+      font-weight: 300;
     }
   }
 

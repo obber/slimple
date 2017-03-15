@@ -12,6 +12,7 @@
 .post-title {
   margin-top: 0;
   font-size: 2rem;
+  text-transform: uppercase;
 
   @include mq('sm') {
     font-size: 2.4rem;
@@ -24,6 +25,12 @@
 
 .single-post {
   margin-bottom: map-get($spacing, 'large');
+}
+
+.post-meta {
+  font-family: $headingFont;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
 .post-date {

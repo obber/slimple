@@ -1,7 +1,6 @@
 body {
   font-family: $mainFont;
   font-size: $baseSize;
-  font-weight: 300;
   hyphens: auto;
 
   @include mq('sm') {
@@ -15,8 +14,8 @@ h3,
 h4, 
 h5, 
 h6 {
-  font-family: $headingFont;
-  font-weight: 600;
+  font-family: $mainFont;
+  font-weight: 700;
   line-height: 1.4em;
   color: palette('darkgray');
 }

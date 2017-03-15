@@ -1,6 +1,10 @@
 .main-nav {
   width: 100%;
   background-color: palette('blue');
+  font-family: $headingFont;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 300;
 
   @include mq('sm') {
     background-color: palette('white');
