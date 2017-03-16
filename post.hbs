@@ -4,7 +4,10 @@
 <article class="post {{#is "page"}}page{{/is}}">
 
   <header class="post-header">
+    {{!-- Post Title --}}
     <h1 class="post-title">{{title}}</h1>
+
+    {{!-- Meta Information --}}
     {{#is "post"}}
     <section class="post-meta">
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
@@ -15,9 +18,28 @@
     {{/is}}
   </header>
 
+  {{!-- Content --}}
   <section class="post-content">
     {{content}}
   </section>
+
+  {{!-- Disqus Comments --}}
+  {{#is "post"}}
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{url absolute="true"}}';
+      this.page.identifier = 'ghost-{{id}}';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://orryobber.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  {{/is}}
 
 </article>
 {{/post}}
