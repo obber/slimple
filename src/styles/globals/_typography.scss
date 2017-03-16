@@ -45,6 +45,7 @@ code, kbd, pre, samp {
 
 // code blocks
 pre {
+  font-size: 1rem;
   line-height: 1.4;
 
   .hljs {
@@ -52,7 +53,11 @@ pre {
   }
 }
 
-p code {
+p code,
+li code,
+dd code,
+dt code, 
+td code {
   padding: 0px 4px;
   font-size: 1rem;
   background-color: palette('blue', 60);
