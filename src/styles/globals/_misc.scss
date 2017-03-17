@@ -2,6 +2,10 @@
 $borderColor: palette('gray', 10);
 $borderStyle: 1px dashed $borderColor;
 
+* {
+  box-sizing: border-box;
+}
+
 .header .full {
   height: 100%;
 }

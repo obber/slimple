@@ -1,0 +1,23 @@
+@if variable-exists('colors') {
+  @each $color, $_ in $colors {
+    .#{$color} {
+      color: palette('white');
+      position: relative;
+      background-color: palette($color);
+      border-bottom: 3px solid palette($color, -5);
+      cursor: pointer;
+
+      &:hover {
+        background-color: palette($color, 5);
+      }
+
+      &:active {
+        background-color: palette($color, -5);
+        border-top: 3px solid palette($color, -10);
+        border-bottom: 0;
+      }
+    }
+  }
+} @else {
+  @error '$colors is not defined. Did you import the modules/_colors.scss partial?'
+}

@@ -35,7 +35,21 @@ td {
   line-height: 1.6;
 }
 
-code, kbd, pre, samp {
+input,
+textarea {
+  font-family: $mainFont;
+}
+
+label, 
+button {
+  font-family: $headingFont;
+  text-transform: uppercase;
+}
+
+code,
+kbd,
+pre,
+samp {
   font-family: 'op-mono-book', monospace;
 
   & em {

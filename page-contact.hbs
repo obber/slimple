@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{#post}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+<article class="post page">
+
+  <header class="post-header page-header">
+    {{!-- Page Title --}}
+    <h1 class="post-title page-title">{{title}}</h1>
+  </header>
+
+  {{!-- Content --}}
+  <section class="post-content page-content">
+    {{content}}
+  </section>
+
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" placeholder="Joe Schmidt">
+    <label for="email">Email:</label>
+    <input type="email" placeholder="joe@gmail.com">
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="6" placeholder="Hi, message here...."></textarea>
+    <button type="submit" class="blue">Submit</button>
+    </label>
+  </form>
+
+  <script>
+    var form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+    });
+  </script>
+
+</article>
+{{/post}}
