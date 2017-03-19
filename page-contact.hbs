@@ -1,8 +1,7 @@
 {{!< default}}
 
 {{#post}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.0.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <article class="post page">
 
   <header class="post-header page-header">
@@ -25,61 +24,66 @@
     <button id="sendContactForm" type="submit" class="blue">Submit</button>
     </label>
   </form>
-  
-  {{!--<div id="notification">
-    <div class="spinner"></div>
-  </div>--}}
 
   <script>
-    (function() {
-      var $name = $('#visitorName');
-      var $email = $('#visitorEmail');
-      var $message = $('#visitorMessage');
-      var $form = $('#contactForm');
-      var $button = $('#sendContactForm');
+  (function() {
+    var $name = $('#visitorName');
+    var $email = $('#visitorEmail');
+    var $message = $('#visitorMessage');
+    var $form = $('#contactForm');
+    var $button = $('#sendContactForm');
 
-      $form.on('submit', function(e) {
-        e.preventDefault();
+    $form.submit(onSubmit);
 
-        startSpinner();
-
-        axios.post('http://api.kanadachi.com:9999/contact', {
+    function onSubmit(e) {
+      e.preventDefault();
+      startSpinner();
+      $.ajax({
+        url: 'http://api.kanadachi.com:9999/contact',
+        type: 'POST',
+        data: JSON.stringify({
           name: $name.val(),
           email: $email.val(),
           message: $message.val()
-        })
-          .then(function(resp) {
-            $button.removeClass('gray');
-            $button.addClass('green');
-            $button.html('Your message was sent.');
-            setTimeout(resetForm, 5000);
-          })
-          .catch(function(err) {
-            $button.removeClass('gray');
-            $button.addClass('red');
-            $button.html('Error! Please find me on social.');
-            setTimeout(resetForm, 5000);
-          });
-      });
+        }),
+        contentType: 'application/json'
+      })
+        .done(onSuccess)
+        .fail(onError);
+    }
 
-      function resetForm() {
-        $button.prop('disabled', false);
-        $button.removeClass('red green');
-        $button.addClass('blue');
-        $button.html('Submit');
-        $name.val('');
-        $email.val('');
-        $message.val('');
-      }
+    function startSpinner() {
+      $button.prop('disabled', true);
+      $button.removeClass('blue');
+      $button.addClass('gray');
+      $button.html('<div class="spinner"></div>');
+    }
 
-      function startSpinner() {
-        $button.prop('disabled', true);
-        $button.removeClass('blue');
-        $button.addClass('gray');
-        $button.html('<div class="spinner"></div>');
-      }
+    function onSuccess() {
+      $button.removeClass('gray');
+      $button.addClass('green');
+      $button.html('Your message was sent.');
+      setTimeout(resetForm, 5000);
+    }
 
-    })();
+    function onError(err) {
+      $button.removeClass('gray');
+      $button.addClass('red');
+      $button.html('Error! Please find me on social.');
+      setTimeout(resetForm, 5000);
+    }
+
+    function resetForm() {
+      $button.prop('disabled', false);
+      $button.removeClass('red green');
+      $button.addClass('blue');
+      $button.html('Submit');
+      $name.val('');
+      $email.val('');
+      $message.val('');
+    }
+
+  })();
   </script>
 
 </article>
