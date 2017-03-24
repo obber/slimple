@@ -23,6 +23,29 @@
     {{content}}
   </section>
 
+  <section class="suggested-content row">
+    {{!-- Read Previous--}}
+    {{#prev_post}}
+    <section class="col-xs-6">
+      <p>Previous post:</p>
+      <a class="read-next-story prev" href="{{url}}">
+        <h2>{{title}}</h2>
+        <p>{{excerpt words="19"}}&hellip;</p>
+      </a>
+    </section>
+    {{/prev_post}}
+    {{!-- Read Next --}}
+    {{#next_post}}
+    <section class="col-xs-6">
+      <p>Up next:</p>
+      <a class="read-next-story" href="{{url}}">
+        <h2>{{title}}</h2>
+        <p>{{excerpt words="19"}}&hellip;</p>
+      </a>
+    </section>
+    {{/next_post}}
+  </section>
+
   {{!-- Disqus Comments --}}
   {{#is "post"}}
   <div id="disqus_thread"></div>
