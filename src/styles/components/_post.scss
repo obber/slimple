@@ -54,3 +54,39 @@
     margin-top: 0;
   }
 }
+
+.suggested-content {
+  margin: map-get($spacing, 'medium') 0;
+  border-top: 1px dashed palette('gray', 10);
+  border-bottom: 1px dashed palette('gray', 10);
+
+  @include mq('sm') {
+    margin: map-get($spacing, 'large') 0;
+  }
+}
+
+.read-story {
+  p {
+    color: palette('gray');
+  }
+
+  a h3 {
+    color: palette('darkgray');
+
+    &:hover {
+      color: palette('red');
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.read-next-story {
+  text-align: right;
+}
+
+.read-prev-story {
+  text-align: left;
+}

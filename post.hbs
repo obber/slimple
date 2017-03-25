@@ -26,21 +26,19 @@
   <section class="suggested-content row">
     {{!-- Read Previous--}}
     {{#prev_post}}
-    <section class="col-xs-6">
+    <section class="col-xs-6 read-story read-prev-story">
       <p>Previous post:</p>
-      <a class="read-next-story prev" href="{{url}}">
-        <h2>{{title}}</h2>
-        <p>{{excerpt words="19"}}&hellip;</p>
+      <a class="prev-link" href="{{url}}">
+        <h3>{{title}}</h3>
       </a>
     </section>
     {{/prev_post}}
     {{!-- Read Next --}}
     {{#next_post}}
-    <section class="col-xs-6">
+    <section class="col-xs-6 read-story read-next-story">
       <p>Up next:</p>
-      <a class="read-next-story" href="{{url}}">
-        <h2>{{title}}</h2>
-        <p>{{excerpt words="19"}}&hellip;</p>
+      <a class="next-link" href="{{url}}">
+        <h3>{{title}}</h3>
       </a>
     </section>
     {{/next_post}}
