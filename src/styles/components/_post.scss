@@ -68,6 +68,11 @@
 .read-story {
   p {
     color: palette('gray');
+    margin-bottom: 0;
+  }
+  
+  h3 {
+    margin-top: 0.3em;
   }
 
   a h3 {
