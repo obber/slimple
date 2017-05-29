@@ -1,11 +1,11 @@
 {
   "js": [
-    "node_modules/highlightjs/highlight.pack.js",
+    "node_modules/prismjs/prism.js",
     "src/js/*.js"
   ],
   "css": [
     "node_modules/normalize.css/normalize.css",
     "node_modules/flexboxgrid/dist/flexboxgrid.css",
-    "node_modules/highlightjs/styles/tomorrow-night-bright.css"
+    "src/dependencies/prism-atom-dark-theme.css"
   ]
 }

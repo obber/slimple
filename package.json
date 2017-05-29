@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "flexboxgrid": "^6.3.1",
-    "highlightjs": "^9.8.0",
     "node-sass": "^4.5.0",
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^5.0.0",
+    "prismjs": "^1.6.0"
   },
   "devDependencies": {
     "copyfiles": "^1.2.0",
