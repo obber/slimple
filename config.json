@@ -1,6 +1,7 @@
 {
   "js": [
     "node_modules/prismjs/prism.js",
+    "node_modules/prismjs/components/prism-jsx.js",
     "src/js/*.js"
   ],
   "css": [
