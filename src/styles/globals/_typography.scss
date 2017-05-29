@@ -50,11 +50,12 @@ button {
 code,
 kbd,
 pre,
-samp {
-  font-family: 'op-mono-book', monospace;
+samp,
+code[class*=language-] {
+  font-family: $codeFont;
 
   & em {
-    font-family: 'op-mono-book-italic', monospace;
+    font-family: $codeItalicFont;
   }
 }
 
@@ -62,10 +63,7 @@ samp {
 pre {
   font-size: 1rem;
   line-height: 1.4;
-
-  .hljs {
-    padding: 20px;
-  }
+  padding: 20px;
 }
 
 p code,
